@@ -1,18 +1,11 @@
-# входные данные
 result1 = "результат операции: 42"
 result2 = "результат операции: 514"
 result3 = "результат работы программы: 9"
 
-# Получение числа, прибавление 10
-index1 = int(result1[20:22]) + 10  # получение числа, прибавление 10
-index2 = int(result2[20:25]) + 10  # получение числа, прибавление 10
+number1 = int(result1[result1.index(':') + 2:]) + 10  # находит индекс символа :  пропуская двоеточие и пробел
+number2 = int(result2[result2.index(':') + 2:]) + 10
+number3 = int(result3[result3.index(':') + 2:]) + 10
 
-num1 = result3.index('9')  # первого вхождения символа 9
-
-# начиная с 30-го индекса до конца строки и добавляет к нему срез строки result3 начиная с индекса символа 9
-num = result3[30:] + result3[num1:]
-index3 = int(num) + 10
-
-print(index1)
-print(index2)
-print(index3)
+print(number1)
+print(number2)
+print(number3)
