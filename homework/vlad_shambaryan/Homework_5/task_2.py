@@ -9,4 +9,3 @@ number3 = int(result3[result3.index(':') + 2:]) + 10
 print(number1)
 print(number2)
 print(number3)
-
