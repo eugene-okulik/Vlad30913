@@ -1,4 +1,4 @@
-students = ['Ivanov', 'Petrov', 'Sidorov']  # имена студентов
+students = ['Ivanov', 'Petrov', 'Sidorov']  # фамилии студентов
 
 subjects = ['math', 'biology', 'geography']
 
