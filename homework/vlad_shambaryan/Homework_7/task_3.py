@@ -1,6 +1,3 @@
-def extract_and_add_10(result_str):
-    # Разделяем строку по ':' и сразу преобразуем вторую часть в число, добавляем 10 и возвращаем результат
-    return int(result_str.split(':')[1].strip()) + 10
 
 results = [
     "результат операции: 42",
@@ -9,6 +6,11 @@ results = [
     "результат: 2"
 ]
 
-for result in results:
-    print(extract_and_add_10(result))
 
+def main(result_str):
+
+    return int(result_str.split(':')[1].strip()) + 10
+
+
+for result in results:
+    print(main(result))
