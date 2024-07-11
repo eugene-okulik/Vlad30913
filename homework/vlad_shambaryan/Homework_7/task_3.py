@@ -1,6 +1,9 @@
 def extract_and_add_10(result_str):
+
     parts = result_str.split(':')
+
     number = int(parts[1].strip())
+
     return number + 10
 
 results = [
@@ -11,4 +14,5 @@ results = [
 ]
 
 for result in results:
+
     print(extract_and_add_10(result))
