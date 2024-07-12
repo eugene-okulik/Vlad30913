@@ -7,6 +7,7 @@ def fibonacci_generator():
         yield a
         a, b = b, a + b
 
+
 fib_gen = fibonacci_generator()
 
 for _ in range(4):
