@@ -1,6 +1,7 @@
 import sys
 sys.set_int_max_str_digits(50000)
 
+
 def fibonacci_generator():
     a, b = 0, 1
     while True:
@@ -28,4 +29,4 @@ print(f"Тысячное число Фибоначчи: {thousandth}")
 for _ in range(100000):
     next(fib_gen)
 hundred_thousandth = next(fib_gen)
-print(f"Стотысячное число Фибоначи: {hundred_thousandth}")
+print(f"Стотысячное число Фибоначчи: {hundred_thousandth}")
