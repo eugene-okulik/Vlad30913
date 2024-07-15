@@ -4,8 +4,7 @@ def repeat_me(func):
         for _ in range(count):
             func(*args, **kwargs)
     return wrapper
-
-@repeat_me
+@ repeat_me
 def example(text):
     print(text)
 
