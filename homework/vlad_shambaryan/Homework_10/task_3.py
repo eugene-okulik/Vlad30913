@@ -12,6 +12,7 @@ def choose_operation(func):
             return "No valid operation found"
     return wrapper
 
+
 @choose_operation
 def calc(first, second, operation):
     if operation == '+':
