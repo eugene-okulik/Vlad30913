@@ -31,8 +31,6 @@ for book in books:
     print(book.details())
 
 
-
-
 class SchoolBook(Book):
     def __init__(self, title, author, pages, isbn, subject, grade, has_exercises, reserved=False):
 
