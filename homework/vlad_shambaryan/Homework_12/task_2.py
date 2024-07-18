@@ -29,7 +29,6 @@ class Sunflower(Flower):
         super().__init__("Sunflower", color, stem_length, freshness, price, lifetime)
 
 
-
 class Bouquet:
     def __init__(self):
         self.flowers = []
