@@ -64,7 +64,7 @@ bouquet.add_flower(sunflower1)
 
 # стоимость и время жизни букета
 print(f"Стоимость букета: {bouquet.calculate_cost()} $")
-print(f"Срок службы букета: {bouquet.calculate_lifetime()}")
+print(f"Срок службы букета: {bouquet.calculate_lifetime()} дней")
 
 # цветы в букете по свежести
 bouquet.sort_by("freshness")
