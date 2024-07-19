@@ -8,16 +8,16 @@ homework = os.path.dirname(os.path.dirname(base_file))
 
 data_text = os.path.join(homework, "eugene_okulik", "hw_13", "data.txt")
 
+
 def file_reader():
     # открываем файл и читаем его
     with open(data_text, "r") as file_list:
         for line in file_list.readlines():
             yield line  # для возврата каждой строки по одной
 
-# список дат из прочитанных строк, обрез строки до нужного формата
-lists = [line[2:29].lstrip()
 
-for line in file_reader()]
+# список дат из прочитанных строк, обрез строки до нужного формата
+lists = [line[2:29].lstrip() for line in file_reader()]
 
 # каждая дата по порядку
 for index, date_str in enumerate(lists):
