@@ -55,6 +55,17 @@ and students.second_name = 'Shambaryan'
 select students.name, students.second_name, `groups`.title, `groups`.start_date, `groups`.end_date, subjets.title, lessons.title, lessons.subject_id,
 marks.value, marks.lesson_id, books.title
 from students
+join `groups` on students.group_id = `groups`.id
+join marks on students.id = marks.student_id
+join lessons on marks.lesson_id = lessons.id
+join subjets on lessons.subject_id = subjets.id
+join books on students.id = books.taken_by_student_id
+where marks.student_id = '1467'
+
+
+select students.name, students.second_name, `groups`.title, `groups`.start_date, `groups`.end_date, subjets.title, lessons.title, lessons.subject_id,
+marks.value, marks.lesson_id, books.title
+from students
 left join `groups` on students.group_id = `groups`.id
 left join marks on students.id = marks.student_id
 left join lessons on marks.lesson_id = lessons.id
