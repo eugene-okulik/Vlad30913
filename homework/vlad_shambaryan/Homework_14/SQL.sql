@@ -11,18 +11,10 @@ insert into `groups` (title, start_date, end_date) values
 ('QA testers', '2023-04-01', '2023-07-01')
 
 
-
 -- Обновляем запись студента, присваивая ему созданную группу
 UPDATE students
-SET group_id = (
-    SELECT id
-    FROM `groups`
-    WHERE title = 'QA testers'
-    AND start_date = '2023-04-01'
-    AND end_date = '2023-07-01'
-)
+SET group_id = 1536
 WHERE id = '1611'
-
 
 
 -- Создайте несколько учебных предметов (subjects)
@@ -64,4 +56,4 @@ LEFT JOIN marks ON students.id = marks.student_id
 LEFT JOIN lessons ON marks.lesson_id = lessons.id
 LEFT JOIN subjets ON lessons.subject_id = subjets.id
 LEFT JOIN books ON students.id = books.taken_by_student_id
-WHERE students.name = 'Vlad' AND students.second_name = 'Shambaryan';
+WHERE students.name = 'Vlad' AND students.second_name = 'Shambaryan'
