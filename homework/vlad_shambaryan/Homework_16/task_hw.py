@@ -33,8 +33,7 @@ with open(data_text, "r", newline="") as data_file:  # Открываем CSV ф
         name, second_name, group_title, book_title, subject_title, lesson_title, mark_value = read
 
         query = """
-    SELECT students.name, students.second_name, `groups`.title, 
-        books.title, subjets.title, lessons.title, marks.value
+    SELECT students.name, students.second_name, `groups`.title, books.title, subjets.title, lessons.title, marks.value
         FROM students
         JOIN `groups` ON students.group_id = `groups`.id
         JOIN books ON students.id = books.taken_by_student_id
@@ -59,4 +58,3 @@ with open(data_text, "r", newline="") as data_file:  # Открываем CSV ф
         print(f"Не обнаружено в базе данных =>> {read}")
 
 db.close()
-
