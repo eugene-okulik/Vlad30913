@@ -56,7 +56,7 @@ with open(data_text, "r", newline="") as data_file:  # Открываем CSV ф
         data_result = cursor.fetchall()  # Извлекаем все строки из результата запроса
 
         if row in data_result:
-            print(f"обнаружено в базе данных")
+            print(f"обнаружено в базе данных =>> {row}")
         else:
             print(f"Не обнаружено в базе данных =>> {row}")
 
