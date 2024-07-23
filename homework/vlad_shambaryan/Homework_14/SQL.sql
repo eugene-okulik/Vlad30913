@@ -13,13 +13,7 @@ insert into `groups` (title, start_date, end_date) values
 
 -- Обновляем запись студента, присваивая ему созданную группу
 UPDATE students
-SET group_id = (
-    SELECT id
-    FROM `groups`
-    WHERE title = 'QA testers'
-    AND start_date = '2023-04-01'
-    AND end_date = '2023-07-01'
-)
+SET group_id = 1536
 WHERE id = '1611'
 
 
@@ -43,7 +37,6 @@ from students
 left join marks on students.id = marks.student_id
 where name = 'Bob'
 and second_name = 'Trump'
-
 
 -- Все книги, которые находятся у студента
 select students.name, students.second_name, books.title

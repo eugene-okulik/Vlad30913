@@ -28,9 +28,9 @@ with open(data_text, "r", newline="") as data_file:  # Открываем CSV ф
     next(reader)  # Пропускаем заголовок
 
     # Проходим по каждой строке файла
-    for read in reader:  # Для каждой строки в CSV файле
+    for row in reader:  # Для каждой строки в CSV файле
         # Распаковываем значения из строки
-        name, second_name, group_title, book_title, subject_title, lesson_title, mark_value = read
+        name, second_name, group_title, book_title, subject_title, lesson_title, mark_value = row
 
         query = """
     SELECT students.name, students.second_name, `groups`.title, books.title, subjets.title, lessons.title, marks.value
@@ -55,6 +55,9 @@ with open(data_text, "r", newline="") as data_file:  # Открываем CSV ф
 
         data_result = cursor.fetchall()  # Извлекаем все строки из результата запроса
 
-        print(f"Не обнаружено в базе данных =>> {read}")
+        if row in data_result:
+            print(f"обнаружено в базе данных")
+        else:
+            print(f"Не обнаружено в базе данных =>> {row}")
 
 db.close()
