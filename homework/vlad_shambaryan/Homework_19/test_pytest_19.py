@@ -45,7 +45,7 @@ def test_get_one_object(new_object_id, for_all_session, for_every_sessions):
 
 @pytest.mark.medium
 def test_get_all_objects(for_all_session, for_every_sessions):
-    response = requests.get(f"https://api.restful-api.dev/objects").json()
+    response = requests.get("https://api.restful-api.dev/objects").json()
     assert len(response) == 13
 
 
@@ -56,7 +56,7 @@ def test_get_all_objects(for_all_session, for_every_sessions):
 def test_add_object(for_all_session, for_every_sessions, body):
     headers = {"Content_Type": "application/json"}
     response = requests.post(
-        f"https://api.restful-api.dev/objects",
+        "https://api.restful-api.dev/objects",
         json=body,
         headers=headers
     )
@@ -83,6 +83,7 @@ def test_update_one_object(new_object_id, for_every_sessions):
     ).json()
     assert response["data"]["color"] == "silver", "Цвет не правильно обновлен"
 
+
 def test_update_object_year(new_object_id, for_every_sessions):
     body = {
         "name": "Apple MacBook Pro 16",
@@ -103,7 +104,6 @@ def test_update_object_year(new_object_id, for_every_sessions):
     assert response["data"]["year"] == 2024, "year не правильно обновлен"
 
 
-
 @pytest.mark.critical
 def test_update_object_name(new_object_id, for_every_sessions):
     body = {
@@ -121,4 +121,3 @@ def test_update_object_name(new_object_id, for_every_sessions):
 def test_delete_object(new_object_id, for_every_sessions):
     response = requests.delete(f"https://api.restful-api.dev/objects/{new_object_id}")
     assert response.status_code == 200
-
