@@ -3,6 +3,7 @@ import requests
 
 BASE_URL = "https://api.restful-api.dev/objects"
 
+
 @allure.feature("Delete request")
 @allure.story("Удалить объект")
 @allure.title("Deleting object information")

@@ -3,6 +3,8 @@ import requests
 import allure
 
 BASE_URL = "https://api.restful-api.dev/objects"
+
+
 @allure.feature("Get request")
 @allure.story("Страница объектов")
 @allure.title("Getting information about one objects")
@@ -70,6 +72,7 @@ def test_update_one_object(new_object_id, for_every_sessions):
     with allure.step("Check object information a new color has been added: silver."):
         assert response["data"]["color"] == "silver", "Цвет не правильно обновлен"
 
+
 @allure.feature("Put request")
 @allure.story("Изменить год выпуска объекта")
 @allure.title("Changing the object year")
@@ -94,6 +97,7 @@ def test_update_object_year(new_object_id, for_every_sessions):
     with allure.step("checking object year change"):
         assert response["data"]["year"] == 2024, "год не правильно обновлен"
 
+
 @allure.feature("Put request")
 @allure.story("Изменить цену объекта")
 @allure.title("Changing the object price")
@@ -117,6 +121,7 @@ def test_update_object_price(new_object_id, for_every_sessions):
         ).json()
     with allure.step("checking object price change"):
         assert response["data"]["price"] == 3000, "price не правильно обновлен"
+
 
 @allure.feature("Patch request")
 @allure.story("Редактировать имя объекта")
