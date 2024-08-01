@@ -3,15 +3,15 @@ import allure
 
 
 TEST_DATA = [
-     {"name": "Dell", "date": {"Price": "2000.99", "Memory": "1 TB"}},
-     {"name": "Lenovo", "date": {"Price": "1500", "Memory": "2 TB"}},
-     {"name": "Acer", "date": {"Price": "1400", "Memory": "1.5 TB"}}
+    {"name": "Dell", "date": {"Price": "2000.99", "Memory": "1 TB"}},
+    {"name": "Lenovo", "date": {"Price": "1500", "Memory": "2 TB"}},
+    {"name": "Acer", "date": {"Price": "1400", "Memory": "1.5 TB"}}
 ]
 
 NEGATIVE_DATA = [
-     {"name": "Dell", "date": {"Price": "2000.99", "Memory": "1 TB"}},
-     {"name": "Lenovo", "date": {"Price": "1500", "Memory": "2 TB"}},
-     {"name": "Acer", "date": {"Price": "1400", "Memory": "1.5 TB"}}
+    {"name": "Dell", "date": {"Price": "2000.99", "Memory": "1 TB"}},
+    {"name": "Lenovo", "date": {"Price": "1500", "Memory": "2 TB"}},
+    {"name": "Acer", "date": {"Price": "1400", "Memory": "1.5 TB"}}
 ]
 
 TEST_DATA_PUT = {
