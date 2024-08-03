@@ -14,7 +14,7 @@ class Products(HttpUser):
     @task(3)
     def get_one_product_performance(self):
         self.client.get(
-            f"/objects/{random.choice([20, 70, 90])}",
+            f"/objects/{random.choice([2, 7, 9])}",
             headers={"Content-Type": "application/json"}
         )
 
@@ -37,7 +37,7 @@ class Products(HttpUser):
     @task(1)
     def update_one_product_performance(self):
         self.client.put(
-            "/objects/10",
+            "/objects/9",
             json={
                 "name": "Apple MacBook Pro 16",
                 "data": {
