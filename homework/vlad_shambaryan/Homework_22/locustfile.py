@@ -52,7 +52,7 @@ class Products(HttpUser):
         )
 
     @task(1)
-    def update_one_product_performance(self):
+    def update_one_product_name_performance(self):
         self.client.patch(
             "/objects/9",
             json={"name": "Apple MacBook Pro 16 (Updated Name)"},
