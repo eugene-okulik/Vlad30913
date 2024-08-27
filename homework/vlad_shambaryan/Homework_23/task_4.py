@@ -12,9 +12,10 @@ def driver():
     yield chrome_driver
     chrome_driver.quit()
 
+
 def test_Choose(driver):
     driver.get('https://the-internet.herokuapp.com/dynamic_loading/2')
-    start = driver.find_element(By.XPATH,"//button[contains(.,'Start')]")
+    start = driver.find_element(By.XPATH, "//button[contains(.,'Start')]")
     start.click()
     WebDriverWait(driver, 7).until(EC.presence_of_all_elements_located
                                    ((By.XPATH, "//h4[contains(.,'Hello World!')]")))

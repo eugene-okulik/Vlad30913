@@ -11,6 +11,7 @@ def driver():
     yield chrome_driver
     chrome_driver.quit()
 
+
 def test_Choose(driver):
     driver.get('https://www.qa-practice.com/elements/select/single_select')
     choose_language = driver.find_element(By.CLASS_NAME, 'form-select')
