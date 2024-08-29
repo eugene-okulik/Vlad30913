@@ -19,7 +19,7 @@ def test_new_tabs(driver):
     driver.get('https://www.demoblaze.com/index.html')
     el_nexus = driver.find_element(By.XPATH, "//a[contains(.,'Nexus 6')]")
     actions = ActionChains(driver)
-    actions.key_down(Keys.CONTROL)  # Нажимаем и удерживаем клавишу CONTROL
+    actions.key_down(Keys.CONTROL)
     actions.click(el_nexus)
     actions.key_up(Keys.CONTROL)
     actions.perform()
@@ -35,5 +35,5 @@ def test_new_tabs(driver):
     cart = driver.find_element(By.ID, 'cartur')
     cart.click()
     in_cart = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
-                              (By.XPATH, "//td[contains(.,'Nexus 6')]")))
+        (By.XPATH, "//td[contains(.,'Nexus 6')]")))
     assert in_cart.text == 'Nexus 6'
