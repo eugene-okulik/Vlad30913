@@ -1,8 +1,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import pytest
-from selenium.webdriver import ActionChains, Keys
-from selenium.webdriver.common.alert import Alert
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
