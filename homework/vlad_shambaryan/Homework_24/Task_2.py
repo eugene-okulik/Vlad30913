@@ -17,7 +17,7 @@ def driver():
 def test_Products(driver):
     driver.get('https://magento.softwaretestingboard.com/gear/bags.html')
     item_name = driver.find_element(By.XPATH, "(//a[@class='product-item-link'])[1]").text
-    item = driver.find_element(By.XPATH,  "//img[@alt='Push It Messenger Bag']")
+    item = driver.find_element(By.XPATH, "//img[@alt='Push It Messenger Bag']")
     add_compare = driver.find_element(By.XPATH, "(//a[contains(.,'Add to Compare')])[1]")
     actions = ActionChains(driver)
     actions.move_to_element(item)
@@ -28,4 +28,3 @@ def test_Products(driver):
     added_item = WebDriverWait(driver, 5).until(
         EC.presence_of_element_located((By.XPATH, "(//strong[@class='product-item-name'])"))).text
     assert added_item in item_name
-
