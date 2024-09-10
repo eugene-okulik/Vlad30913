@@ -30,7 +30,7 @@ def test_practice_form(page: Page):
     hobbies = page.locator("//label[contains(.,'Music')]")
     hobbies.click()
     current_address = page.locator('#currentAddress')
-    current_address.fill(' Vladimir Shambaryan 11 Southgate Blvd C25 N11467 New Castle Delaware 19720 USA ')
+    current_address.fill('11 Southgate Blvd C25 N11467 New Castle Delaware 19720 USA ')
     select_state = page.locator("(//div[contains(.,'Select State')])[12]")
     select_state.click()
     state = page.locator('#react-select-3-option-0')
