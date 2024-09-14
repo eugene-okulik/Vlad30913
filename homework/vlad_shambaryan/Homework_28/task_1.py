@@ -8,7 +8,7 @@ def test_header_replacement(page: Page):
 
     title = "яблокоффон 16 про"
 
-    def handle_route(route: Route):
+    def title_route(route: Route):
         server_response = route.fetch()
         body = server_response.json()
         print("Original response:", body)
@@ -18,7 +18,7 @@ def test_header_replacement(page: Page):
             response=server_response,
             body=body,
             headers={"content-type": "application/json"})
-    page.route(re.compile('library/step0_iphone/digitalmat'), handle_route)
+    page.route(re.compile('library/step0_iphone/digitalmat'), title_route)
     page.goto("https://www.apple.com/shop/buy-iphone")
     iphone = page.locator("(//h3[@class='rf-hcard-content-title'])[1]")
     iphone.click()
