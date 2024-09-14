@@ -4,7 +4,7 @@ from playwright.sync_api import Page, expect, Route
 from time import sleep
 
 
-def test_header_replacement(page: Page):
+def test_title_replacement(page: Page):
 
     title = "яблокоффон 16 про"
 
