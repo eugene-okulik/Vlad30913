@@ -1,0 +1,19 @@
+
+short_loc = "//img[@alt='Ana Running Short']"
+size_loc = '#option-label-size-143-item-171'
+color_loc = "#option-label-color-93-item-56"
+count_loc = "//span[@class='counter-number']"
+add_to_cart_loc = "//button[@type='submit'][contains(.,'Add to Cart')]"
+
+color_error_loc = "//div[@id='super_attribute[143]-error']"
+size_error_loc = "//div[@id='super_attribute[93]-error']"
+products1_loc = ".li.product-item"
+
+compare_loc = "(//span[contains(.,'Add to Compare')])[1]"
+comparision_list_loc = "//div[contains(@class,'message-success success message')]"
+
+product_name_loc = "//span[contains(.,'Ana Running Short')]"
+product_price_loc = "(//span[contains(.,'$40.00')])[4]"
+available_sizes_loc = "(//div[contains(.,'2829')])[10]"
+available_colors_loc = "//span[@id='option-label-color-93']"
+item_in_cart_loc = "(//a[contains(@data-bind,'name')])[2]"

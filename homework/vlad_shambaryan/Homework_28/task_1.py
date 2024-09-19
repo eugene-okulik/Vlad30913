@@ -24,3 +24,4 @@ def test_title_replacement(page: Page):
     iphone.click()
     new_title = page.locator("(//h2[@id='rf-digitalmat-overlay-label-0'])[1]")
     expect(new_title).to_have_text(title)
+    sleep(2)
