@@ -14,6 +14,9 @@ comparision_list_loc = "//div[contains(@class,'message-success success message')
 
 product_name_loc = "//span[contains(.,'Ana Running Short')]"
 product_price_loc = "(//span[contains(.,'$40.00')])[4]"
-available_sizes_loc = "(//div[contains(.,'2829')])[10]"
+size_28_loc = "//div[contains(@option-tooltip-value,'28')]"
+size_29_loc = "//div[contains(@option-tooltip-value,'29')]"
+selected_loc = "//span[contains(.,'28')]"
+selected_loc1 = "//span[contains(.,'29')]"
 available_colors_loc = "//span[@id='option-label-color-93']"
 item_in_cart_loc = "(//a[contains(@data-bind,'name')])[2]"

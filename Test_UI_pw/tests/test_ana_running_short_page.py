@@ -6,7 +6,8 @@ def test_test_product_properties(ana_running_short_page):
     ana_running_short_page.open_ana_running_short_page()
     ana_running_short_page.check_product_name("Ana Running Short")
     ana_running_short_page.check_product_price("$40.00")
-    ana_running_short_page.check_product_size("2829")
+    ana_running_short_page.check_product_size("28")
+    ana_running_short_page.check_product_size_("29")
     ana_running_short_page.check_product_color("Color")
 
 

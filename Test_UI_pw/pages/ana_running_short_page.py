@@ -14,11 +14,17 @@ class AnaRunningShort(BasePage):
         expect(self.page.locator(prod.product_price_loc)).to_have_text(text)
 
     def check_product_size(self, text):
-        self.find(prod.available_sizes_loc).wait_for(state='visible')
-        expect(self.page.locator(prod.available_sizes_loc)).to_have_text(text)
+        size_28 = self.page.locator(prod.size_28_loc)
+        size_28.click()
+        expect(self.page.locator(prod.selected_loc)).to_have_text(text)
+
+    def check_product_size_(self, text):
+        size_29 = self.page.locator(prod.size_29_loc)
+        size_29.click()
+        expect(self.page.locator(prod.selected_loc1)).to_have_text(text)
 
     def check_product_color(self, text):
-        self.find(prod.available_sizes_loc).wait_for(state='visible')
+        self.find(prod.available_colors_loc).wait_for(state='visible')
         expect(self.page.locator(prod.available_colors_loc)).to_have_text(text)
 
     def add_to_compare(self):
