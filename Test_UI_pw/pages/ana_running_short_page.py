@@ -53,7 +53,5 @@ class AnaRunningShort(BasePage):
         add_cart = self.find(prod.add_to_cart_loc)
         sleep(3)
         add_cart.click()
-        color_error = self.find(prod.color_error_loc)
         expect(self.page.locator(prod.color_error_loc)).to_have_text(text)
-        size_error = self.find(prod.size_error_loc)
         expect(self.page.locator(prod.size_error_loc)).to_have_text(text)

@@ -7,7 +7,7 @@ class CreateAccount(BasePage):
 
     account_create_page_url = 'customer/account/create/'
 
-    def fill_incorrect_data(self,  first, last, email, password, conf_password):
+    def fill_incorrect_data(self, first, last, email, password, conf_password):
         first_field = self.find(locc.first_loc)
         last_field = self.find(locc.last_loc)
         email_field = self.find(locc.email_loc)

@@ -36,5 +36,4 @@ class EcoFriendly(BasePage):
 
     def check_product_count(self, count: int):
         products = self.find(ecoloc.products_loc)
-        product_count = products.count()
         expect(products).to_have_count(count)
