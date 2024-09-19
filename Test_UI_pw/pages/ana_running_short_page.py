@@ -1,10 +1,10 @@
-from time import sleep
 from playwright.sync_api import expect
 from Test_UI_pw.pages.locators import product_locators as prod
 from Test_UI_pw.pages.base_page import BasePage
 
 
 class AnaRunningShort(BasePage):
+
     ana_running_short_url = 'ana-running-short.html'
 
     def check_product_name(self, text):
@@ -51,7 +51,6 @@ class AnaRunningShort(BasePage):
 
     def check_add_to_cart_with_out_selected_size_color(self, text):
         add_cart = self.find(prod.add_to_cart_loc)
-        sleep(3)
         add_cart.click()
         expect(self.page.locator(prod.color_error_loc)).to_have_text(text)
         expect(self.page.locator(prod.size_error_loc)).to_have_text(text)
