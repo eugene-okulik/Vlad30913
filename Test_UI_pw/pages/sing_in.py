@@ -24,11 +24,11 @@ class LoginPage(BasePage):
         welcome = self.find(loc.welcome_loc)
         self.find(loc.welcome_loc).wait_for(state='visible')
         print(welcome.text_content())
-        expect(self.page.locator(loc.welcome_loc)).to_have_text(text)
+        expect(self.find(loc.welcome_loc)).to_have_text(text)
 
     @allure.step('Check if the error alert text is as expected')
     def check_error_text(self, text):
         self.find(loc.error_loc).wait_for(state='visible')
-        error = self.page.locator(loc.error_loc)
+        error = self.find(loc.error_loc)
         print(error.text_content())
-        expect(self.page.locator(loc.error_loc)).to_have_text(text)
+        expect(self.find(loc.error_loc)).to_have_text(text)

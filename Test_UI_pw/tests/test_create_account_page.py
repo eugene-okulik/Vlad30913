@@ -39,7 +39,7 @@ def test_check_password_complexity(create_account_page):
     create_account_page.open_account_page()
     create_account_page.fill_incorrect_email('123abc123gmail.com')
     create_account_page.check_message_incorrect_email('Please enter a valid email address (Ex: johndoe@domain.com).')
-    create_account_page.fill_weak_password('12345678')
+    create_account_page.fill_weak_password('12345678ghs')
     create_account_page.check_message_weak_password('Weak')
     create_account_page.fill_medium_password('12345678mM+$')
     create_account_page.check_message_medium_password('Medium')

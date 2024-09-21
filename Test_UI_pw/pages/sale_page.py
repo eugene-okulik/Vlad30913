@@ -9,7 +9,7 @@ class SalePage(BasePage):
 
     def check_title(self, text):
         self.find(loc.page_title_loc)
-        expect(self.page.locator(loc.page_title_loc)).to_have_text(text)
+        expect(self.find(loc.page_title_loc)).to_have_text(text)
 
     def check_product_count(self):
         products = self.find(loc.products_loc)
@@ -20,8 +20,8 @@ class SalePage(BasePage):
 
     def women_s_deals_element(self, text):
         self.find(loc.pands_loc)
-        expect(self.page.locator(loc.pands_loc)).to_have_text(text)
+        expect(self.find(loc.pands_loc)).to_have_text(text)
 
     def mens_bargains_element(self, text):
         self.find(loc.mens_loc)
-        expect(self.page.locator(loc.mens_loc)).to_have_text(text)
+        expect(self.find(loc.mens_loc)).to_have_text(text)

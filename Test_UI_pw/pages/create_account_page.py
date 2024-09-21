@@ -22,14 +22,14 @@ class CreateAccount(BasePage):
         button.click()
 
     def check_error_message_first_name(self, text):
-        expect(self.page.locator(locc.error_loc)).to_have_text(text)
+        expect(self.find(locc.error_loc)).to_have_text(text)
 
     def check_error_message_last_name(self, text):
-        expect(self.page.locator(locc.error_ln_loc)).to_have_text(text)
+        expect(self.find(locc.error_ln_loc)).to_have_text(text)
 
     def check_error_message_first_and_last_name(self, text):
         self.find(locc.error_fn_ln_loc).wait_for(state='visible')
-        expect(self.page.locator(locc.error_fn_ln_loc)).to_have_text(text)
+        expect(self.find(locc.error_fn_ln_loc)).to_have_text(text)
 
     def fill_incorrect_email(self, email):
         email_field = self.find(locc.email_loc)
@@ -38,11 +38,11 @@ class CreateAccount(BasePage):
         button.click()
 
     def check_message_incorrect_email(self, text):
-        expect(self.page.locator(locc.email_error_loc)).to_have_text(text)
+        expect(self.find(locc.email_error_loc)).to_have_text(text)
 
     def check_message_confirm_password(self, text):
         self.find(locc.conf_password_error_loc).wait_for(state='visible')
-        expect(self.page.locator(locc.conf_password_error_loc)).to_have_text(text)
+        expect(self.find(locc.conf_password_error_loc)).to_have_text(text)
 
     def fill_weak_password(self, password):
         self.find(locc.password_loc).wait_for(state='visible')
@@ -62,7 +62,7 @@ class CreateAccount(BasePage):
 
     def check_message_medium_password(self, text):
         self.find(locc.password_message_medium_loc).wait_for(state='visible')
-        expect(self.page.locator(locc.password_message_medium_loc)).to_have_text(text)
+        expect(self.find(locc.password_message_medium_loc)).to_have_text(text)
 
     def fill_strong_password(self, password):
         self.find(locc.password_loc).wait_for(state='visible')
@@ -72,4 +72,4 @@ class CreateAccount(BasePage):
 
     def check_message_strong_password(self, text):
         self.find(locc.password_message_strong_loc).wait_for(state='visible')
-        expect(self.page.locator(locc.password_message_strong_loc)).to_have_text(text)
+        expect(self.find(locc.password_message_strong_loc)).to_have_text(text)
