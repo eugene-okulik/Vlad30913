@@ -1,12 +1,11 @@
 import re
 import json
 from playwright.sync_api import Page, expect, Route
-from time import sleep
 
 
 def test_title_replacement(page: Page):
 
-    title = "яблокоффон 16 про"
+    title = "яблокофон 16 про"
 
     def title_route(route: Route):
         server_response = route.fetch()
