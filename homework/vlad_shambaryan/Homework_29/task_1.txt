@@ -1,0 +1,18 @@
+
+g  <  ESC-<       *  Go to first line in file  Перейти к первой строке в файле
+
+G  >  ESC->       *  Go to last line in file   Перейти к последней строке в файле
+
+f  ^F  ^V  SPACE  *  Forward  one window   Вперед на одно окно
+
+e  ^E  j  ^N  CR  *  Forward  one line   Вперед на одну строку
+
+y  ^Y  k  ^K  ^P  *  Backward one line   Назад на одну строку
+
+/pattern          *  Search forward for (N-th) matching line  Поиск соответствующей строки вперед
+
+?pattern          *  Search backward for (N-th) matching line  Поиск в обратном направлении (N-й) совпадающей строки
+
+N                 *  Repeat previous search in reverse direction  Повторить предыдущий поиск в обратном направлении
+
+n                 *  Repeat previous search (for N-th occurrence)  Повторить предыдущий поиск (для N-го вхождения)
