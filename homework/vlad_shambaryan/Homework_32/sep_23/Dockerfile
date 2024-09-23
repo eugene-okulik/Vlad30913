@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Выполняем команду для запуска Python-файла
-CMD ["python", "script.py"]
+CMD ["python", "openweather.py"]
