@@ -3,7 +3,7 @@
 
 /dev/zero  crw-rw-rw-  character special file  Символьные устройства
 
-/dev/sda              No such file or directory  Данный файл или каталог отсутствует
+/dev/sda  ------  No such file or directory  Данный файл или каталог отсутствует
 
 /dev/tty  crw-rw-rw-  character special file  Символьные устройства
 
