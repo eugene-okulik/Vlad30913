@@ -8,7 +8,7 @@ class MemeUser(HttpUser):
     def on_start(self):
         response = self.client.post(
             '/authorize',
-            json={'name': 'Eugeny'}
+            json={'name': 'vlad'}
         )
         self.token = response.json()['token']
 
@@ -25,3 +25,5 @@ class MemeUser(HttpUser):
             f'/meme/{random.choice([21, 29, 276, 239])}',
             headers={'Authorization': self.token}
         )
+
+#  http://167.172.172.115:52355

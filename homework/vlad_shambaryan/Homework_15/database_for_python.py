@@ -40,7 +40,6 @@ cursor.executemany(
     ]
 )
 
-
 # Создайте несколько учебных предметов (subjects)
 cursor.execute("INSERT INTO subjets (title) VALUES (%s)", ['JavaScript'])
 subject_1_id = cursor.lastrowid

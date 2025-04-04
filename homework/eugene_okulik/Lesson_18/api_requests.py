@@ -81,7 +81,7 @@ def patch_a_post():
     clear(post_id)
 
 
-def delete_a_post():
+def test_delete_a_post():
     post_id = new_post()
     response = requests.delete(f'https://jsonplaceholder.typicode.com/posts/{post_id}')
     print(response.json())

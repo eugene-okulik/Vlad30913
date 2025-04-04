@@ -65,3 +65,5 @@ class Products(HttpUser):
             "/objects/9",
             headers={"Content-Type": "application/json"}
         )
+
+#  https://api.restful-api.dev
